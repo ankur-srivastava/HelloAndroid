@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 public class MainActivity extends Activity {
 
@@ -20,5 +21,9 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         Log.v(TAG, "In onCreate");
         setContentView(R.layout.activity_main);
+    }
+
+    public void clickMe(View view){
+        Toast.makeText(MainActivity.this, "Button Clicked !!", Toast.LENGTH_SHORT).show();
     }
 }
