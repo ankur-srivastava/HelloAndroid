@@ -15,11 +15,13 @@
     android:orientation="vertical">
 
     <TextView
+        android:id="@+id/helloId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hello Android !!"/>
 
     <TextView
+        android:id="@+id/exampleId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Ankur"
