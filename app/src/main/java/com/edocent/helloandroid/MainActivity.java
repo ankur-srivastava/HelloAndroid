@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends Activity {
@@ -24,6 +25,10 @@ public class MainActivity extends Activity {
     }
 
     public void clickMe(View view){
-        Toast.makeText(MainActivity.this, "Button Clicked !!", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(MainActivity.this, "Button Clicked !!", Toast.LENGTH_SHORT).show();
+        TextView helloText = (TextView) findViewById(R.id.helloId);
+        if(helloText != null){
+            Log.v(TAG, "Lets check the value in hello id "+helloText.getText());
+        }
     }
 }
