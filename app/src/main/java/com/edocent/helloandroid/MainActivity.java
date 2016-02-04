@@ -1,6 +1,7 @@
 package com.edocent.helloandroid;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -30,5 +31,8 @@ public class MainActivity extends Activity {
         if(helloText != null){
             Log.v(TAG, "Lets check the value in hello id "+helloText.getText());
         }
+
+        Intent intent=new Intent(this, MessageActivity.class);
+        startActivity(intent);
     }
 }
