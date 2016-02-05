@@ -32,7 +32,10 @@ public class MainActivity extends Activity {
             Log.v(TAG, "Lets check the value in hello id "+helloText.getText());
         }
 
-        Intent intent=new Intent(this, MessageActivity.class);
+        //Intent intent=new Intent(this, MessageActivity.class);
+        Intent intent=new Intent(Intent.ACTION_SEND);
+        intent.putExtra(Intent.EXTRA_TEXT, "Hello");
+        intent.setType("text/plain");
         startActivity(intent);
     }
 }
