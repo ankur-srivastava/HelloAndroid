@@ -3,6 +3,7 @@ package com.edocent.helloandroid;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -22,6 +23,7 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Log.v(TAG, "In onCreate");
+        sayHello();
         setContentView(R.layout.activity_main);
     }
 
@@ -38,4 +40,18 @@ public class MainActivity extends Activity {
         intent.setType("text/plain");
         startActivity(intent);
     }
+
+    public void sayHello(){
+
+        Handler handler = new Handler();
+        handler.postDelayed(new Runnable(){
+            @Override
+            public void run(){
+                Log.v(TAG, "In sayHello");
+                Toast.makeText(MainActivity.this, "Do you need any Help ?", Toast.LENGTH_SHORT).show();
+            }
+        }, 5000);
+
+    }
+
 }
