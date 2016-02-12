@@ -27,6 +27,35 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
     }
 
+    @Override
+    public void onStart(){
+        super.onStart();
+        Log.v(TAG, "In onStart");
+    }
+
+    @Override
+    public void onResume(){
+        super.onResume();
+        Log.v(TAG, "In onStop");
+    }
+
+    @Override
+    public void onPause(){
+        super.onPause();
+        Log.v(TAG, "In onStop");
+    }
+
+    @Override
+    public void onRestart(){
+        super.onRestart();
+        Log.v(TAG, "In onRestart");
+    }
+
+    @Override
+    public void onDestroy(){
+        super.onDestroy();
+    }
+
     public void clickMe(View view){
         //Toast.makeText(MainActivity.this, "Button Clicked !!", Toast.LENGTH_SHORT).show();
         TextView helloText = (TextView) findViewById(R.id.helloId);
@@ -44,14 +73,13 @@ public class MainActivity extends Activity {
     public void sayHello(){
 
         Handler handler = new Handler();
-        handler.postDelayed(new Runnable(){
+        handler.postDelayed(new Runnable() {
             @Override
-            public void run(){
+            public void run() {
                 Log.v(TAG, "In sayHello");
                 Toast.makeText(MainActivity.this, "Do you need any Help ?", Toast.LENGTH_SHORT).show();
             }
         }, 5000);
 
     }
-
 }
