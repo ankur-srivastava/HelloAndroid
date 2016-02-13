@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,30 +8,27 @@
     android:orientation="vertical">
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/emailId"
+        android:text="Email"
+        android:layout_margin="15dp"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/passwordId"
+        android:text="Password"
+        android:layout_margin="15dp"
+        />
+
+    <Button
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/buttonId"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
         android:text="Click Me"
         android:onClick="clickMe"
         android:layout_margin="15dp"/>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/emailId"
-        android:text="Email"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"/>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/passwordId"
-        android:text="Password"
-        android:layout_below="@+id/emailId"
-        android:layout_alignLeft="@+id/emailId"
-        />
-
-</RelativeLayout>
+</LinearLayout>
