@@ -8,15 +8,17 @@
     android:orientation="vertical">
 
     <Button
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/emailId"
         android:text="Email"
+        android:layout_gravity="center"
+        android:gravity="center"
         android:layout_margin="15dp"
         />
 
     <Button
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/passwordId"
         android:text="Password"
@@ -24,11 +26,12 @@
         />
 
     <Button
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/buttonId"
         android:text="Click Me"
         android:onClick="clickMe"
+        android:layout_gravity="left"
         android:layout_margin="15dp"/>
 
 </LinearLayout>
