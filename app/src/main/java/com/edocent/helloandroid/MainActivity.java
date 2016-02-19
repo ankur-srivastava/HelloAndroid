@@ -12,6 +12,8 @@ import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.AdapterView;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,9 +24,20 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Log.v(TAG, "In onCreate");
-        sayHello();
         setContentView(R.layout.activity_main);
+
+        //Get the ListView using the ID
+        ListView mobilesList = (ListView) findViewById(R.id.mobilesId);
+
+        //Create an Event Listener
+        AdapterView.OnItemClickListener onItemClickListener = new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+              Log.v(TAG, "--- Item Position is ---"+position);
+            }
+        };
+
+        mobilesList.setOnItemClickListener(onItemClickListener);
     }
 
     @Override
@@ -58,10 +71,6 @@ public class MainActivity extends Activity {
 
     public void clickMe(View view){
         //Toast.makeText(MainActivity.this, "Button Clicked !!", Toast.LENGTH_SHORT).show();
-        TextView helloText = (TextView) findViewById(R.id.helloId);
-        if(helloText != null){
-            Log.v(TAG, "Lets check the value in hello id "+helloText.getText());
-        }
 
         //Intent intent=new Intent(this, MessageActivity.class);
         Intent intent=new Intent(Intent.ACTION_SEND);
