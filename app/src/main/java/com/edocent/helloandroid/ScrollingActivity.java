@@ -23,4 +23,10 @@ public class ScrollingActivity extends ListActivity {
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_expandable_list_item_1, colors);
         listView.setAdapter(arrayAdapter);
     }
+
+    @Override
+    public void onListItemClick(ListView listView, View itemView, int position, long id){
+        //Implement your Logic
+        //Here id param is id of the item clicked. It can also be the DB unique id
+    }
 }
