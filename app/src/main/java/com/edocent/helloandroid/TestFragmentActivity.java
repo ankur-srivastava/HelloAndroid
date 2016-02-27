@@ -24,6 +24,12 @@ public class TestFragmentActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+
+        ItemFragment itemFragment = (ItemFragment) getSupportFragmentManager().findFragmentById(R.id.itemFragmentId);
+
+        itemFragment.setItemId(1);
+
     }
 
 }

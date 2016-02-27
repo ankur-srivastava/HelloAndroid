@@ -13,6 +13,7 @@ import android.view.ViewGroup;
  */
 public class ItemFragment extends Fragment {
 
+    private long itemId;
 
     public ItemFragment() {
         // Required empty public constructor
@@ -26,4 +27,7 @@ public class ItemFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_item, container, false);
     }
 
+    public void setItemId(long itemId) {
+        this.itemId = itemId;
+    }
 }
